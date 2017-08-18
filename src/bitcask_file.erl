@@ -20,8 +20,9 @@
 %%
 %% -------------------------------------------------------------------
 -module(bitcask_file).
--compile(export_all).
 -behaviour(gen_server).
+-export([file_open/2, file_close/1, file_sync/1, file_pread/3, file_pwrite/3,
+         file_read/2, file_write/2, file_seekbof/1, file_position/2, file_truncate/1]).
 
 -include_lib("eunit/include/eunit.hrl").
 
